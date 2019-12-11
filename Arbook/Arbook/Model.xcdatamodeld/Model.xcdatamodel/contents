@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="18G103" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CachePost" representedClassName=".CachePost" syncable="YES">
+        <attribute name="desc" attributeType="String" customClassName="."/>
+        <attribute name="image" attributeType="String" customClassName="."/>
+        <attribute name="likes" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" customClassName="."/>
+        <attribute name="owner" attributeType="String" customClassName="."/>
+        <attribute name="title" attributeType="String" customClassName="."/>
+        <attribute name="upload_date" attributeType="String" customClassName="."/>
+    </entity>
+    <elements>
+        <element name="CachePost" positionX="-63" positionY="-18" width="128" height="133"/>
+    </elements>
+</model>

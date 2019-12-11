@@ -1,0 +1,6 @@
+framework module Pods_Arbook {
+  umbrella header "Pods-Arbook-umbrella.h"
+
+  export *
+  module * { export * }
+}
