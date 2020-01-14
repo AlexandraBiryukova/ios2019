@@ -13,6 +13,9 @@ class Room {
         self.name = name
     }
 }
+class Table{
+    var chair:Int?
+}
 class Address{
     var buildingName:String?
     var buildingNumber:String?

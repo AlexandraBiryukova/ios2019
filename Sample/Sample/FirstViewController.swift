@@ -8,6 +8,12 @@
 
 import UIKit
 
+
+enum Products: String, CaseIterable{
+    case bread = "hhh"
+    case water = "vvv"
+}
+
 class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -18,7 +24,7 @@ class FirstViewController: UIViewController {
 //        gradient.colors = [UIColor.black.cgColor, UIColor.purple.cgColor,UIColor.black.cgColor]
 //
 //        view.layer.insertSublayer(gradient, at: 0)
-        view.backgroundColor = UIColor.cyan
+        view.backgroundColor = UIColor.yellow
         
 //        var a = 25
 //        var b = 2
@@ -35,27 +41,63 @@ class FirstViewController: UIViewController {
 //        print(names.count)
 //        print("Now remove : \(removing())")
 //        print(names.count)
-        var cH: [() -> Void] = []
-        func some( handler : @escaping () -> Void){
-            cH.append(handler)
+//        var cH: [() -> Void] = []
+//        func some( handler : @escaping () -> Void){
+//            cH.append(handler)
+//        }
+//
+//        func any(handler : () -> Void){
+//            handler()
+//        }
+//
+//        some{
+//            print("I want to escape")
+//        }
+//        any{
+//            print("I don't want to escape")
+//        }
+//        cH[0]()
+        
+        let input:String = "sum (1) (26) (38)"
+        print(input.data(using: .utf8)?.base64EncodedString())
+//        let mapped: [Int?] = input.map { num in Int(String(num)) }
+//        print(mapped)
+        print(sumOfString(input: input))
+//        print(Products.allCases.count)
+//        print(Products.bread.rawValue)
+        
+//        var t = Table()
+//
+//        print(type(of: t.chair))
+//        if let i = t.chair{
+//            print(type(of: i))
+//        }else{
+//            print("oops")
+//        }
+        
+        
+        
+    
+        
+    }
+    
+    
+    func sumOfString(input:String) -> Int{
+        let arr = input.split(separator: " ")
+        var sum: Int! = 0
+        for i in arr {
+            var ii = i
+            ii.removeFirst()
+            ii.removeLast()
+            if let num = Int(ii) {
+                print(num)
+                sum += num
+            }else{
+                print("not a number")
+            }
+
         }
-        
-        func any(handler : () -> Void){
-            handler()
-        }
-        
-        some{
-            print("I want to escape")
-        }
-        any{
-            print("I don't want to escape")
-        }
-        cH[0]()
-        
-        
-        
-        
-        
+        return sum
     }
     
 
